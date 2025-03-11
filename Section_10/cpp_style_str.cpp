@@ -39,5 +39,44 @@ int main()
     cout << sentence << endl;
 
     // sentence= "C++" +" is a powerful"; //illegal way
+
+    // accesing elements using [] and .at()
+
+    cout << part2[1] << endl;
+    cout << part2.at(0) << endl;
+
+    part1[1] = 'p';
+    part1[2] = 'p';
+
+    // loop to display string
+
+    string name{"krishna"};
+
+    for (int c : name)
+    {
+        cout << c << endl;
+    }
+
+    // substring
+    // using substr() method
+    // object.substr(start_index , length)
+
+    string test{"this is a test"};
+
+    cout << test.substr(0, 4) << endl;
+    cout << test.substr(10, 4) << endl;
+
+    // searching
+    // using - .find(search_string)
+
+    cout << test.find("a") << endl;
+    cout << test.find("est") << endl;
+
+    // remove char using erase() and clear()
+
+    cout << test.erase(0, 5) << endl; // is a test
+    cout << test.erase(5, 4) << endl; // is a
+    test.clear();                     // clear entire string
+
     return 0;
 }

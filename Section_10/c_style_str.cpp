@@ -75,7 +75,6 @@ int main()
     cout << "----------------------------" << endl;
 
     cout << "Result of comparing " << temp << " and " << full_name << ":" << strcmp(temp, full_name) << endl;
-    cout << "Result of comparing " << full_name << " and " << temp << ":" << strcmp(temp, full_name) << endl;
 
     return 0;
 }
