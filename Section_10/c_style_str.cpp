@@ -6,8 +6,8 @@ using namespace std;
 
 int main()
 {
-    char first_name[20]{};
-    char last_name[20]{};
+    // char first_name[20]{};
+    // char last_name[20]{};
     char full_name[50]{};
     char temp[50]{};
 
@@ -38,4 +38,44 @@ int main()
     cout << "Enter your full name :";
     cin.getline(full_name, 50);
     cout << full_name << endl;
+
+    cout << "-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- - " << endl;
+    strcpy(temp, full_name);
+    if (strcmp(temp, full_name) == 0)
+    {
+        cout << temp << " and " << full_name << " are same" << endl;
+    }
+    else
+    {
+        cout << temp << " and " << full_name << " are different " << endl;
+    }
+
+    cout << "-------------------------------------" << endl;
+
+    for (size_t i{0}; i < strlen(full_name); ++i)
+    {
+        if (isalpha(full_name[i]))
+        {
+            full_name[i] = toupper(full_name[i]);
+        }
+    }
+    cout << "Your name is :" << full_name << endl;
+
+    cout << "-------------------------" << endl;
+
+    if (strcmp(temp, full_name) == 0)
+    {
+        cout << temp << " and " << full_name << " are same " << endl;
+    }
+    else
+    {
+        cout << temp << " and " << full_name << " are not same " << endl;
+    }
+
+    cout << "----------------------------" << endl;
+
+    cout << "Result of comparing " << temp << " and " << full_name << ":" << strcmp(temp, full_name) << endl;
+    cout << "Result of comparing " << full_name << " and " << temp << ":" << strcmp(temp, full_name) << endl;
+
+    return 0;
 }
