@@ -78,5 +78,30 @@ int main()
     cout << test.erase(5, 4) << endl; // is a
     test.clear();                     // clear entire string
 
+    // other methods
+    // .length()
+
+    string leng("hello");
+    cout << leng.length() << endl;
+
+    leng += "krishna";
+    cout << leng << endl;
+
+    // ->wrong method // string name{};
+    // cout << "Enter your name :" << endl;
+    // cin.getline(name);
+    // cout << "Your name is : " << name << endl;
+
+    string ss;
+    cout << "enter something something :";
+    cin >> ss;
+    cout << ss << endl; // only accept up to first space
+
+    getline(cin, ss); // read entire line until \n
+    cout << ss << endl;
+
+    getline(cin, ss, 'a');
+    cout << ss << endl;
+
     return 0;
 }
