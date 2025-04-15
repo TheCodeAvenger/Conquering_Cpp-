@@ -16,5 +16,12 @@ int main()
 
     cout << "value of p is : " << p << endl;
 
+    int num{10};
+    double num_2{2.5};
+
+    int *new_ptr{nullptr};
+    new_ptr = &num;   // ok
+    new_ptr = &num_2; // compiler error , due to different data type
+
     return 0;
 }
