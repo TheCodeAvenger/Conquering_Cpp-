@@ -9,8 +9,7 @@ int main()
     int high_score{100};
     int low_score{50};
     const int *score_ptr{&high_score};
-
-    *score_ptr = 80;        // error
+    // *score_ptr = 80;        // error
     score_ptr = &low_score; // passed
 
     // example 2:-
@@ -18,8 +17,8 @@ int main()
     int b{20};
     const int *ptr{&a};
 
-    *ptr = 30; // error
-    ptr = &b;  // passed
+    // *ptr = 30; // error
+    ptr = &b; // passed
 
     // --------Const Pointer to data-------------
     // example 1:-
@@ -29,8 +28,8 @@ int main()
 
     int *const score_ptr2{&high_score2};
 
-    *score_ptr2 = 90;         // passed
-    score_ptr2 = &low_score2; // error
+    *score_ptr2 = 90; // passed
+    // score_ptr2 = &low_score2; // error
 
     //  example 2
 
@@ -40,7 +39,7 @@ int main()
     int *const ptr2{&c};
 
     *ptr2 = 30; // passed
-    ptr2 = &d;  // error
+    // ptr2 = &d;  // error
 
     // --------Const Pointer to const data-------------
     // example 1:-
@@ -49,17 +48,17 @@ int main()
 
     const int *const ptr3{&high_score3};
 
-    *ptr3 = 90;         // error
-    ptr3 = &low_score3; // error
+    // *ptr3 = 90;         // error
+    // ptr3 = &low_score3; // error
 
     // example 2:-
-    const e{10};
-    const f{20};
+    const int e{10};
+    const int f{20};
 
     const int *const ptr4{&e};
 
-    *ptr4 = 30; // error
-    ptr4 = &f;  // error
+    // *ptr4 = 30; // error
+    // ptr4 = &f;  // error
 
     return 0;
 }
