@@ -32,16 +32,39 @@ public:
 
     // methods
 
-    bool deposit(double);
-    bool widthdrawl(double);
+    bool deposit(double bal)
+    {
+        balance += bal;
+        cout << "In Deposit" << endl;
+    }
+
+    bool withdraw(double bal)
+    {
+        balance -= bal;
+        cout << "In Withdraw " << endl;
+    }
 };
 
 int main()
 {
+    Account krishna_account;
+    krishna_account.name = "Krishna's account ";
+    krishna_account.balance = 5000.0;
+
+    krishna_account.deposit(1000.0);
+    krishna_account.withdraw(500.0);
+
     Player Frank;
     Frank.name = "Frank";
     Frank.health = 100;
     Frank.xp = 12;
     Frank.talk(" Hi there");
+
+    Player *enemy = new Player; // enemy is pointer to Player object
+    (*enemy).name = "Enemy";
+    (*enemy).health = 100;
+    enemy->xp = 15;
+    enemy->talk("I'll Destroy you");
+
     return 0;
 }
