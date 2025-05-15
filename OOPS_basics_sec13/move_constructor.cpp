@@ -25,6 +25,7 @@ Move::Move(int d)
 {
     data = new int;
     *data = d;
+    
     cout << "Constructor for :" << d << endl;
 }
 
@@ -47,6 +48,6 @@ Move::Move(const Move &source)
 
 int main()
 {
-    // your code here
+   // your code here
     return 0;
 }

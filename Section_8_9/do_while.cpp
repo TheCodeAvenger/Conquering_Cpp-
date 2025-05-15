@@ -5,6 +5,17 @@ using namespace std;
 int main()
 {
 
+    cout<<"hello guyz"<<endl;
+    cout<<"hello guyz"<<endl;
+    cout<<"hello guyz"<<endl;
+    cout<<"hello guyz"<<endl;
+    cout<<"hello guyz"<<endl;
+    cout<<"hello guyz"<<endl;
+    cout<<"hello guyz"<<endl;
+    cout<<"hello guyz"<<endl;
+    cout<<"hello guyz"<<endl;
+    cout<<"hello guyz"<<endl;
+
     int number{};
 
     do
