@@ -36,11 +36,11 @@ Shallow::Shallow(const Shallow &source)
     cout << "Copy constructor - shallow copy" << endl;
 }
 
-// ✅ fixed destructor
+// ✅ fixed des///tructor
 Shallow::~Shallow()
 {
     delete data;
-    cout << "Destructor freeing data" << endl;
+    cout << "Destructor fr  eeing data" << endl;
 }
 
 void display_shallow(Shallow s)

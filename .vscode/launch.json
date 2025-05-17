@@ -2,7 +2,7 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run C++ in Terminal",
+      "name": "Run C++ file",
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
@@ -12,8 +12,14 @@
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
-      "miDebuggerPath": "C:/MinGW/bin/gdb.exe",
-      "preLaunchTask": "build active file"
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
     },
     {
       "name": "C/C++ Runner: Debug Session",
@@ -22,8 +28,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/krish/Desktop/C++ From basics to advance/OOPS_basics_sec13",
-      "program": "c:/Users/krish/Desktop/C++ From basics to advance/OOPS_basics_sec13/build/Debug/outDebug",
+      "cwd": "c:/Users/krish/Desktop/C++ From basics to advance",
+      "program": "c:/Users/krish/Desktop/C++ From basics to advance/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
